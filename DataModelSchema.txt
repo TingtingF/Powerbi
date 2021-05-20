@@ -1,8 +1,8 @@
 {
-  "name": "c19814bb-f57b-482f-889a-6e7b21429fb0",
+  "name": "8e811057-03d1-4bf2-bfff-70dd511ec458",
   "compatibilityLevel": 1550,
   "createdTimestamp": "2020-03-27T18:57:42.113333+01:00",
-  "lastUpdate": "2021-05-20T23:41:02.603333+02:00",
+  "lastUpdate": "2021-05-20T23:48:10.05+02:00",
   "lastSchemaUpdate": "2021-05-20T10:26:46.13+02:00",
   "lastProcessed": "2020-04-01T00:52:07.76+02:00",
   "model": {
@@ -411,7 +411,7 @@
         "name": "COVID",
         "lineageTag": "cf15ed27-df77-46d4-afce-1e9db59f448d",
         "modifiedTime": "2021-05-20T08:26:48.816667",
-        "structureModifiedTime": "2020-03-28T03:39:25.82",
+        "structureModifiedTime": "2021-05-20T21:49:10.966667",
         "columns": [
           {
             "type": "rowNumber",
@@ -746,41 +746,6 @@
               {
                 "name": "PBI_WasHiddenAtRefresh",
                 "value": "False",
-                "modifiedTime": "2020-03-27T17:57:42.536667"
-              }
-            ]
-          },
-          {
-            "type": "calculated",
-            "name": "County",
-            "dataType": "string",
-            "isDataTypeInferred": true,
-            "expression": "'COVID'[County Name] & \", \" & 'COVID'[State]",
-            "lineageTag": "b00f487c-879b-4018-99cb-8364d9410ce8",
-            "dataCategory": "County",
-            "summarizeBy": "none",
-            "modifiedTime": "2021-05-20T08:26:48.816667",
-            "structureModifiedTime": "2020-03-27T17:57:42.533333",
-            "refreshedTime": "2020-03-31T22:52:08.033333",
-            "attributeHierarchy": {
-              "state": "ready",
-              "modifiedTime": "2020-03-28T15:40:16.503333",
-              "refreshedTime": "2020-03-31T22:52:08.043333"
-            },
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic",
-                "modifiedTime": "2020-03-27T17:57:42.536667"
-              },
-              {
-                "name": "Format",
-                "value": "<Format Format=\"Text\" />",
-                "modifiedTime": "2020-03-27T17:57:42.536667"
-              },
-              {
-                "name": "DataTypeAtRefresh",
-                "value": "String#####not a type",
                 "modifiedTime": "2020-03-27T17:57:42.536667"
               }
             ]
@@ -1625,11 +1590,11 @@
           },
           {
             "name": "Case fatality rate",
-            "expression": "\nvar _totalDeath = SUM(COVID[Daily deaths])\nvar _totalCase  = SUM('COVID'[Daily cases] )\nreturn \nDIVIDE(_totalDeath,_totalCase)\n\n",
+            "expression": "\n\nDIVIDE([Total deaths],[Total confirmed cases])\n\n",
             "formatString": "0.0\\ %;-0.0\\ %;0.0\\ %",
             "lineageTag": "8ed849b8-3267-4c09-8560-9ac5f0b7fc0e",
             "dataType": "double",
-            "modifiedTime": "2021-05-20T10:01:33.483333",
+            "modifiedTime": "2021-05-20T21:48:50.673333",
             "structureModifiedTime": "2020-03-27T17:57:42.533333",
             "annotations": [
               {
