@@ -1,0 +1,1905 @@
+{
+  "name": "c19814bb-f57b-482f-889a-6e7b21429fb0",
+  "compatibilityLevel": 1550,
+  "createdTimestamp": "2020-03-27T18:57:42.113333+01:00",
+  "lastUpdate": "2021-05-20T23:41:02.603333+02:00",
+  "lastSchemaUpdate": "2021-05-20T10:26:46.13+02:00",
+  "lastProcessed": "2020-04-01T00:52:07.76+02:00",
+  "model": {
+    "culture": "en-US",
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "sourceQueryCulture": "en-US",
+    "modifiedTime": "2021-05-20T08:26:49.93",
+    "structureModifiedTime": "2021-05-20T21:41:46.666667",
+    "tables": [
+      {
+        "name": "DateTableTemplate_fe7eb183-f12b-4c88-bb89-cfaa7f88e1df",
+        "isHidden": true,
+        "isPrivate": true,
+        "lineageTag": "8305beb7-dd7f-4720-98e3-ecf265b29701",
+        "modifiedTime": "2021-05-20T08:26:48.816667",
+        "structureModifiedTime": "2020-03-27T17:57:42.533333",
+        "columns": [
+          {
+            "type": "rowNumber",
+            "name": "RowNumber-2662979B-1795-4F74-8F37-6A1BA8059B61",
+            "dataType": "int64",
+            "isHidden": true,
+            "isUnique": true,
+            "isKey": true,
+            "isNullable": false,
+            "modifiedTime": "2020-03-27T17:57:42.55",
+            "structureModifiedTime": "2020-03-27T17:57:42.533333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2020-03-27T17:57:44.9",
+              "refreshedTime": "2020-03-27T17:57:44.9"
+            },
+            "annotations": [
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              }
+            ]
+          },
+          {
+            "type": "calculatedTableColumn",
+            "name": "Date",
+            "dataType": "dateTime",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "sourceColumn": "[Date]",
+            "lineageTag": "d2ca49d4-c3a8-447a-b077-174b1d99ad6b",
+            "dataCategory": "PaddedDateTableDates",
+            "summarizeBy": "none",
+            "modifiedTime": "2021-05-20T08:26:48.816667",
+            "structureModifiedTime": "2020-03-27T17:57:42.533333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2020-03-27T17:57:44.876667",
+              "refreshedTime": "2020-03-27T17:57:44.876667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"DateTimeGeneralPattern\"><DateTimes><DateTime LCID=\"1033\" Group=\"GeneralDateTimeLong\" FormatString=\"G\" /></DateTimes></Format>",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "DateTime#####not a type",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Year",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "expression": "YEAR([Date])",
+            "lineageTag": "34b85974-51d4-4dba-9572-1574f272e71b",
+            "dataCategory": "Years",
+            "summarizeBy": "none",
+            "modifiedTime": "2021-05-20T08:26:48.816667",
+            "structureModifiedTime": "2020-03-27T17:57:42.533333",
+            "refreshedTime": "2020-03-27T17:57:44.906667",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2020-03-27T17:57:44.906667",
+              "refreshedTime": "2020-03-27T17:57:44.906667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "MonthNo",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "expression": "MONTH([Date])",
+            "lineageTag": "eb1c0df9-7a20-420e-acfa-bc64212bac1a",
+            "dataCategory": "MonthOfYear",
+            "summarizeBy": "none",
+            "modifiedTime": "2021-05-20T08:26:48.816667",
+            "structureModifiedTime": "2020-03-27T17:57:42.533333",
+            "refreshedTime": "2020-03-27T17:57:44.906667",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2020-03-27T17:57:44.906667",
+              "refreshedTime": "2020-03-27T17:57:44.906667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Month",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "sortByColumn": "MonthNo",
+            "lineageTag": "2d9eeb5e-b33c-47ca-a2f3-b557c7c6d385",
+            "dataCategory": "Months",
+            "summarizeBy": "none",
+            "modifiedTime": "2021-05-20T08:26:48.816667",
+            "structureModifiedTime": "2020-03-27T17:57:42.533333",
+            "refreshedTime": "2020-03-27T17:57:44.91",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2020-03-27T17:57:44.91",
+              "refreshedTime": "2020-03-27T17:57:44.91"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "QuarterNo",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "lineageTag": "100fc075-108b-4d5f-ac4e-75bf3724773e",
+            "dataCategory": "QuarterOfYear",
+            "summarizeBy": "none",
+            "modifiedTime": "2021-05-20T08:26:48.816667",
+            "structureModifiedTime": "2020-03-27T17:57:42.533333",
+            "refreshedTime": "2020-03-27T17:57:44.91",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2020-03-27T17:57:44.91",
+              "refreshedTime": "2020-03-27T17:57:44.91"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Quarter",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "expression": "\"Qtr \" & [QuarterNo]",
+            "sortByColumn": "QuarterNo",
+            "lineageTag": "1ffa8f94-a119-41a4-91ff-259be7a8e706",
+            "dataCategory": "Quarters",
+            "summarizeBy": "none",
+            "modifiedTime": "2021-05-20T08:26:48.816667",
+            "structureModifiedTime": "2020-03-27T17:57:42.533333",
+            "refreshedTime": "2020-03-27T17:57:44.913333",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2020-03-27T17:57:44.913333",
+              "refreshedTime": "2020-03-27T17:57:44.913333"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Day",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "expression": "DAY([Date])",
+            "lineageTag": "7f58e280-7fab-4be6-9590-644aae6eb27d",
+            "dataCategory": "DayOfMonth",
+            "summarizeBy": "none",
+            "modifiedTime": "2021-05-20T08:26:48.816667",
+            "structureModifiedTime": "2020-03-27T17:57:42.533333",
+            "refreshedTime": "2020-03-27T17:57:44.906667",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2020-03-27T17:57:44.906667",
+              "refreshedTime": "2020-03-27T17:57:44.906667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DateTableTemplate_fe7eb183-f12b-4c88-bb89-cfaa7f88e1df-30604837-d47d-48d6-b5a3-b689e47bd491",
+            "mode": "import",
+            "state": "ready",
+            "modifiedTime": "2020-03-27T17:57:44.823333",
+            "refreshedTime": "2020-03-27T17:57:44.823333",
+            "source": {
+              "type": "calculated",
+              "expression": "Calendar(Date(2015,1,1), Date(2015,1,1))"
+            }
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Date Hierarchy",
+            "lineageTag": "08b9398f-417b-41d8-8b87-06ebe9e0a79c",
+            "state": "ready",
+            "modifiedTime": "2021-05-20T08:26:48.816667",
+            "structureModifiedTime": "2020-03-27T17:57:42.533333",
+            "refreshedTime": "2020-03-27T17:57:44.92",
+            "levels": [
+              {
+                "name": "Year",
+                "ordinal": 0,
+                "column": "Year",
+                "lineageTag": "cca48e8f-188c-4314-911a-27ff7e4a3511",
+                "modifiedTime": "2021-05-20T08:26:48.816667"
+              },
+              {
+                "name": "Quarter",
+                "ordinal": 1,
+                "column": "Quarter",
+                "lineageTag": "40db36fb-d71b-4873-b245-bb3640a098fe",
+                "modifiedTime": "2021-05-20T08:26:48.816667"
+              },
+              {
+                "name": "Month",
+                "ordinal": 2,
+                "column": "Month",
+                "lineageTag": "a3f0361b-4934-4754-b9d0-1854f05f28fc",
+                "modifiedTime": "2021-05-20T08:26:48.816667"
+              },
+              {
+                "name": "Day",
+                "ordinal": 3,
+                "column": "Day",
+                "lineageTag": "0bb5deed-3dfe-4539-9b7e-2782f1d25478",
+                "modifiedTime": "2021-05-20T08:26:48.816667"
+              }
+            ],
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              }
+            ]
+          }
+        ],
+        "annotations": [
+          {
+            "name": "__PBI_TemplateDateTable",
+            "value": "true",
+            "modifiedTime": "2020-03-27T17:57:42.536667"
+          },
+          {
+            "name": "DefaultItem",
+            "value": "DateHierarchy",
+            "modifiedTime": "2020-03-27T17:57:42.536667"
+          }
+        ]
+      },
+      {
+        "name": "COVID",
+        "lineageTag": "cf15ed27-df77-46d4-afce-1e9db59f448d",
+        "modifiedTime": "2021-05-20T08:26:48.816667",
+        "structureModifiedTime": "2020-03-28T03:39:25.82",
+        "columns": [
+          {
+            "type": "rowNumber",
+            "name": "RowNumber-2662979B-1795-4F74-8F37-6A1BA8059B61",
+            "dataType": "int64",
+            "isHidden": true,
+            "isUnique": true,
+            "isKey": true,
+            "isNullable": false,
+            "modifiedTime": "2020-03-27T17:57:42.55",
+            "structureModifiedTime": "2020-03-27T17:57:42.533333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2020-03-28T01:39:22.85",
+              "refreshedTime": "2020-03-31T22:52:07.766667"
+            },
+            "annotations": [
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              }
+            ]
+          },
+          {
+            "name": "County Name",
+            "dataType": "string",
+            "sourceColumn": "County Name",
+            "lineageTag": "c940038c-7c76-4499-a5e9-2c778f0c3cc2",
+            "summarizeBy": "none",
+            "modifiedTime": "2021-05-20T08:26:48.816667",
+            "structureModifiedTime": "2020-03-27T17:57:42.533333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2020-03-28T01:39:22.82",
+              "refreshedTime": "2020-03-31T22:52:07.77"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "County Name",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              }
+            ]
+          },
+          {
+            "name": "State",
+            "dataType": "string",
+            "sourceColumn": "State",
+            "lineageTag": "a616ae4c-9cc7-4c6b-b0cf-1af0b9a32dff",
+            "summarizeBy": "none",
+            "modifiedTime": "2021-05-20T08:26:48.816667",
+            "structureModifiedTime": "2020-03-27T17:57:42.533333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2020-03-28T01:39:22.816667",
+              "refreshedTime": "2020-03-31T22:52:07.773333"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "State",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              }
+            ]
+          },
+          {
+            "name": "stateFIPS",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "stateFIPS",
+            "lineageTag": "fc23a270-af6a-4a25-9f60-09a4552c67e5",
+            "summarizeBy": "none",
+            "modifiedTime": "2021-05-20T08:26:48.816667",
+            "structureModifiedTime": "2020-03-27T17:57:42.533333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2020-03-28T01:39:22.816667",
+              "refreshedTime": "2020-03-31T22:52:07.773333"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />",
+                "modifiedTime": "2020-03-28T01:39:12.373333"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type",
+                "modifiedTime": "2020-03-28T01:39:12.373333"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "stateFIPS",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              }
+            ]
+          },
+          {
+            "name": "Date",
+            "dataType": "dateTime",
+            "sourceColumn": "Date",
+            "lineageTag": "540e6bef-6e62-4462-acf9-5c011b6963e6",
+            "summarizeBy": "none",
+            "modifiedTime": "2021-05-20T08:26:48.816667",
+            "structureModifiedTime": "2020-03-27T17:57:42.533333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2020-03-28T01:39:22.816667",
+              "refreshedTime": "2020-03-31T22:52:07.766667"
+            },
+            "variations": [
+              {
+                "name": "Variation",
+                "relationship": "61d3981d-89bc-4f78-b2b7-ab908a42ac71",
+                "defaultHierarchy": {
+                  "table": "LocalDateTable_a0f5b894-4f57-4a54-a9d5-5508aa5843d0",
+                  "hierarchy": "Date Hierarchy"
+                },
+                "isDefault": true
+              }
+            ],
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"DateTimeCustom\"><DateTimes><DateTime LCID=\"1033\" Group=\"ShortDate\" FormatString=\"M/d/yyyy\" /></DateTimes></Format>",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "DateTime#####Date",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Date",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              }
+            ]
+          },
+          {
+            "name": "Cases",
+            "dataType": "int64",
+            "sourceColumn": "Cases",
+            "formatString": "0",
+            "lineageTag": "bb9a18ac-3731-49a5-9ad4-d08dd484b753",
+            "summarizeBy": "sum",
+            "modifiedTime": "2021-05-20T08:26:48.816667",
+            "structureModifiedTime": "2020-03-27T17:57:42.533333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2020-03-28T01:39:22.85",
+              "refreshedTime": "2020-03-31T22:52:07.766667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Cases",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              }
+            ]
+          },
+          {
+            "name": "FIPS",
+            "dataType": "string",
+            "sourceColumn": "FIPS",
+            "lineageTag": "f311a895-fb90-4698-9083-e2da19f8e997",
+            "summarizeBy": "none",
+            "modifiedTime": "2021-05-20T08:26:48.816667",
+            "structureModifiedTime": "2020-03-27T17:57:42.533333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2020-03-28T01:39:22.82",
+              "refreshedTime": "2020-03-31T22:52:07.773333"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "FIPS",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              }
+            ]
+          },
+          {
+            "name": "Deaths",
+            "dataType": "int64",
+            "sourceColumn": "Deaths",
+            "formatString": "0",
+            "lineageTag": "a79cb718-e363-46e3-995a-a1b7f23873ab",
+            "summarizeBy": "sum",
+            "modifiedTime": "2021-05-20T08:26:48.816667",
+            "structureModifiedTime": "2020-03-27T17:57:42.533333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2020-03-28T01:39:22.85",
+              "refreshedTime": "2020-03-31T22:52:07.766667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "Deaths",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "County",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "'COVID'[County Name] & \", \" & 'COVID'[State]",
+            "lineageTag": "b00f487c-879b-4018-99cb-8364d9410ce8",
+            "dataCategory": "County",
+            "summarizeBy": "none",
+            "modifiedTime": "2021-05-20T08:26:48.816667",
+            "structureModifiedTime": "2020-03-27T17:57:42.533333",
+            "refreshedTime": "2020-03-31T22:52:08.033333",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2020-03-28T15:40:16.503333",
+              "refreshedTime": "2020-03-31T22:52:08.043333"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Daily cases",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "expression": "\nVAR __CountyName = 'COVID'[County Name]\nVAR __State = 'COVID'[State]\nVAR __Yesterday =  DATEADD(COVID[Date],-1,DAY)\nVAR __TodaysCases = 'COVID'[Cases]\n\nRETURN  __TodaysCases - CALCULATE(\n    SUM('COVID'[Cases]) , \n    FILTER(\n        COVID, \n        COVID[Date] = __Yesterday &&\n        COVID[County Name] = __CountyName &&\n        COVID[State] = __State\n    )\n) + 0",
+            "formatString": "#,0",
+            "lineageTag": "2136762f-bf59-455f-bb4d-b5a67aa45693",
+            "summarizeBy": "sum",
+            "modifiedTime": "2021-05-20T08:26:48.816667",
+            "structureModifiedTime": "2020-03-27T17:57:42.533333",
+            "refreshedTime": "2020-03-31T22:52:09.166667",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2020-03-28T01:39:23.586667",
+              "refreshedTime": "2020-03-31T22:52:09.17"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" ThousandSeparator=\"True\" />",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Daily deaths",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "expression": "\nVAR __CountyName = 'COVID'[County Name]\nVAR __State = 'COVID'[State]\nVAR __Yesterday =  DATEADD(COVID[Date],-1,DAY)\nVAR __TodaysDeaths = 'COVID'[Deaths]\n\nRETURN  __TodaysDeaths - CALCULATE(\n    SUM('COVID'[Deaths]) , \n    FILTER(\n        COVID, \n        COVID[Date] = __Yesterday &&\n        COVID[County Name] = __CountyName &&\n        COVID[State] = __State\n    )\n) + 0",
+            "formatString": "0",
+            "lineageTag": "92d93b94-146c-4353-b791-00ce841c0852",
+            "summarizeBy": "sum",
+            "modifiedTime": "2021-05-20T08:26:48.816667",
+            "structureModifiedTime": "2020-03-27T17:57:42.533333",
+            "refreshedTime": "2020-03-31T22:52:09.136667",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2020-03-28T01:39:23.593333",
+              "refreshedTime": "2020-03-31T22:52:09.136667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "COVID-2e509512-c6a9-426c-b8d3-3b5c4542fa79",
+            "mode": "import",
+            "state": "ready",
+            "modifiedTime": "2021-05-20T08:26:49.936667",
+            "refreshedTime": "2020-03-31T22:52:07.76",
+            "source": {
+              "type": "m",
+              "expression": "let\n    Source = Table.NestedJoin(Cases, {\"County Name\", \"State\", \"stateFIPS\", \"Date\", \"FIPS\"}, Deaths, {\"County Name\", \"State\", \"stateFIPS\", \"Date\", \"FIPS\"}, \"Deaths\", JoinKind.LeftOuter),\n    #\"Expanded Deaths\" = Table.ExpandTableColumn(Source, \"Deaths\", {\"Deaths\"}, {\"Deaths.1\"}),\n    #\"Renamed Columns\" = Table.RenameColumns(#\"Expanded Deaths\",{{\"Deaths.1\", \"Deaths\"}}),\n    #\"Changed Type\" = Table.TransformColumnTypes(#\"Renamed Columns\",{{\"Date\", type date}}),\n    #\"Replaced Value\" = Table.ReplaceValue(#\"Changed Type\",\"Jackson County (including other portions of Kansas City)\",\"Jackson County\",Replacer.ReplaceText,{\"County Name\"}),\n    #\"Replaced Value1\" = Table.ReplaceValue(#\"Replaced Value\",\"New York City\",\"New York*\",Replacer.ReplaceText,{\"County Name\"}),\n    #\"Replaced Value2\" = Table.ReplaceValue(#\"Replaced Value1\",\"City of St. Louis\",\"St. Louis City\",Replacer.ReplaceText,{\"County Name\"}),\n    #\"Replaced Value3\" = Table.ReplaceValue(#\"Replaced Value2\",\"City and Borough of Juneau\",\"Juneau Borough\",Replacer.ReplaceText,{\"County Name\"}),\n    #\"Replaced Value4\" = Table.ReplaceValue(#\"Replaced Value3\",\"Municipality of Anchorage\",\"Anchorage\",Replacer.ReplaceText,{\"County Name\"}),\n    #\"Changed Type1\" = Table.TransformColumnTypes(#\"Replaced Value4\",{{\"Cases\", Int64.Type}, {\"Deaths\", Int64.Type}})\nin\n    #\"Changed Type1\""
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": "Updated",
+            "expression": "\"Data provided by USAFacts. Because of the frequency of data upates, they may not reflect the exact numbers reported by government organizations or the news media. For more information or to download the data, please click the logo below.  Data updated through \" & FORMAT([Max date],\"mmmm dd, yyyy\") & \".\"",
+            "lineageTag": "e33fe6db-d2e8-42bb-8061-c15b982f4012",
+            "dataType": "string",
+            "modifiedTime": "2021-05-20T08:26:48.816667",
+            "structureModifiedTime": "2020-03-27T17:57:42.533333",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              }
+            ]
+          },
+          {
+            "name": "Max date",
+            "expression": "CALCULATE(MAX('COVID'[Date]),ALL('COVID'))",
+            "formatString": "General Date",
+            "isHidden": true,
+            "lineageTag": "526d40df-fbf2-4034-a86d-a19b9282b5f3",
+            "dataType": "dateTime",
+            "modifiedTime": "2021-05-20T08:26:48.816667",
+            "structureModifiedTime": "2020-03-27T17:57:42.533333",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"DateTimeGeneralPattern\"><DateTimes><DateTime LCID=\"1033\" Group=\"GeneralDateTimeLong\" FormatString=\"G\" /></DateTimes></Format>",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              }
+            ]
+          }
+        ],
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation",
+            "modifiedTime": "2020-03-27T17:57:42.536667"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table",
+            "modifiedTime": "2020-03-29T23:02:10.706667"
+          },
+          {
+            "name": "PBI_DescriptionAtRefresh",
+            "modifiedTime": "2021-05-20T08:26:49.936667"
+          }
+        ]
+      },
+      {
+        "name": "StateDim",
+        "lineageTag": "9592c05d-1a38-4bd8-ac29-3611421dafda",
+        "modifiedTime": "2021-05-20T08:26:48.816667",
+        "structureModifiedTime": "2020-03-28T03:18:24.533333",
+        "columns": [
+          {
+            "type": "rowNumber",
+            "name": "RowNumber-2662979B-1795-4F74-8F37-6A1BA8059B61",
+            "dataType": "int64",
+            "isHidden": true,
+            "isUnique": true,
+            "isKey": true,
+            "isNullable": false,
+            "modifiedTime": "2020-03-27T17:57:42.55",
+            "structureModifiedTime": "2020-03-27T17:57:42.533333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2020-03-27T17:57:44.806667",
+              "refreshedTime": "2020-03-30T16:30:45.966667"
+            },
+            "annotations": [
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              }
+            ]
+          },
+          {
+            "name": "State",
+            "dataType": "string",
+            "sourceColumn": "State",
+            "lineageTag": "e1924f8b-3753-4ce3-a5e5-64650a03cae4",
+            "dataCategory": "StateOrProvince",
+            "summarizeBy": "none",
+            "modifiedTime": "2021-05-20T08:26:48.816667",
+            "structureModifiedTime": "2020-03-27T17:57:42.533333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2020-03-27T17:57:44.813333",
+              "refreshedTime": "2020-03-30T16:30:45.966667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "State",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              }
+            ]
+          },
+          {
+            "name": "State code",
+            "dataType": "string",
+            "sourceColumn": "State code",
+            "lineageTag": "cdbb8e45-ccc6-4e7f-b4b7-fe0da823a9cd",
+            "summarizeBy": "none",
+            "modifiedTime": "2021-05-20T08:26:48.816667",
+            "structureModifiedTime": "2020-03-27T17:57:42.533333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2020-03-27T17:57:44.81",
+              "refreshedTime": "2020-03-30T16:30:45.966667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "State code",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              }
+            ]
+          },
+          {
+            "name": "US territories",
+            "dataType": "string",
+            "sourceColumn": "US territories",
+            "lineageTag": "f7343899-ef75-44a3-a48f-5ffdd622ab94",
+            "summarizeBy": "none",
+            "modifiedTime": "2021-05-20T08:26:48.816667",
+            "structureModifiedTime": "2020-03-27T17:57:42.533333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2020-03-27T17:57:44.813333",
+              "refreshedTime": "2020-03-30T16:30:45.97"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              },
+              {
+                "name": "PBI_NameAtRefresh",
+                "value": "US territories",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              },
+              {
+                "name": "PBI_WasHiddenAtRefresh",
+                "value": "False",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Country",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "expression": "\"USA\"",
+            "lineageTag": "10655d38-9175-4df6-ba81-5ecdd8966426",
+            "summarizeBy": "none",
+            "modifiedTime": "2021-05-20T08:26:48.816667",
+            "structureModifiedTime": "2020-03-27T17:57:42.533333",
+            "refreshedTime": "2020-03-30T16:30:45.97",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2020-03-27T17:57:44.82",
+              "refreshedTime": "2020-03-30T16:30:45.97"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "StateDim-44150ab7-d238-4a8e-be80-b5d1ac40ecec",
+            "mode": "import",
+            "state": "ready",
+            "modifiedTime": "2021-05-20T08:26:49.936667",
+            "refreshedTime": "2020-03-30T16:30:45.92",
+            "source": {
+              "type": "m",
+              "expression": "let\n    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText(\"XZTRbuowDIZfpeJ62jsgykbHmlYU6DjTLkyb0ahtjJJ0jPP0J07ZqZmEkPq5sX/7j/v+Ppt3cIQeZg+z+av/Ezj7eAjUtgGuGTTqL+pA/3DagrZgCW8mvIBOfaLRit5fzFkAOzRQI+GMY61l5VQ1OIpsp0gsO7iAkZ7Eywk/+TSqpuxPTPizRHMKNZ9ZzZVPoJR/XiUTTGpoSEUSM9Z1SqOiZhKWNdG1gtB5IhjFS0Cs0PpnFOuCQandULVXwocJv+Kg7C3tK8uRgtLUbLrkzFw70DXhmGNroWoGK52jqilPo6pGnUATTjj2c7boqGoqOLeWfuczzSkt7iM4mICZYSlqN4pPmVlCHs3t6oglx18QvBJ7Di/RCvqzbVRwV6zuYy/SWElTEy/3gVR+q4qsE+l94ICmJcKmLNC4JlqAQe9sULD4HYyhHech2GizRlGFjGnK2s7fmLArGVuLzMgT0pgzdv1zqbW9dl8wLkDOjNk0WMsosTc/N8ycAod7scXid/C/2IKJ3Uoy1Uqa4lZw/h1u4/ZtYjsHjX/aMdP20vTeTQ/2nCq/SaP8PZNfgvdLn1xoueQBaV3EDpXM6lLZCrVV4QxruLxi75MRZZ7Ne2lUBToqoMfwvaHreJB2XPEBetrvHWPBSGl05BeFVuo23rATOXsvH6RxGG3G65NvWGj3WDze5LPT+4S9EivrvDAX4WfkP2NDfwyNxsykHDoYKHX5c+7jHw==\", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type text) meta [Serialized.Text = true]) in type table [State = _t, #\"State code\" = _t, #\"US territories\" = _t]),\n    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"State\", type text}, {\"State code\", type text}, {\"US territories\", type text}})\nin\n    #\"Changed Type\""
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": "Drill-through button text",
+            "expression": "IF(SELECTEDVALUE(StateDim[State],0)==0,\"Click on a State to view by County  \", \"Click here to view by County in \" & VALUES(StateDim[State code]) &\"  \")",
+            "lineageTag": "fc16f95f-5c88-4036-bb4e-4c9371319fe2",
+            "dataType": "string",
+            "modifiedTime": "2021-05-20T08:26:48.816667",
+            "structureModifiedTime": "2020-03-27T17:57:42.533333",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              }
+            ]
+          }
+        ],
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table",
+            "modifiedTime": "2020-03-27T17:57:42.536667"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation",
+            "modifiedTime": "2020-03-27T17:57:42.536667"
+          },
+          {
+            "name": "PBI_DescriptionAtRefresh",
+            "modifiedTime": "2021-05-20T08:26:49.936667"
+          }
+        ]
+      },
+      {
+        "name": "LocalDateTable_a0f5b894-4f57-4a54-a9d5-5508aa5843d0",
+        "isHidden": true,
+        "showAsVariationsOnly": true,
+        "lineageTag": "c09d025b-215c-475f-9d87-911e4f08df0f",
+        "modifiedTime": "2021-05-20T08:26:48.816667",
+        "structureModifiedTime": "2020-03-27T17:57:42.533333",
+        "columns": [
+          {
+            "type": "rowNumber",
+            "name": "RowNumber-2662979B-1795-4F74-8F37-6A1BA8059B61",
+            "dataType": "int64",
+            "isHidden": true,
+            "isUnique": true,
+            "isKey": true,
+            "isNullable": false,
+            "modifiedTime": "2020-03-28T01:39:22.923333",
+            "structureModifiedTime": "2020-03-27T17:57:42.533333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2020-03-28T01:39:22.956667",
+              "refreshedTime": "2020-03-31T22:52:07.876667"
+            },
+            "annotations": [
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              }
+            ]
+          },
+          {
+            "type": "calculatedTableColumn",
+            "name": "Date",
+            "dataType": "dateTime",
+            "isNameInferred": true,
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "sourceColumn": "[Date]",
+            "lineageTag": "fe9d519c-7da2-4e73-a190-23d95d3e219a",
+            "dataCategory": "PaddedDateTableDates",
+            "summarizeBy": "none",
+            "modifiedTime": "2021-05-20T08:26:48.816667",
+            "structureModifiedTime": "2020-03-27T17:57:42.533333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2020-03-28T01:39:22.96",
+              "refreshedTime": "2020-03-31T22:52:07.88"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"DateTimeGeneralPattern\"><DateTimes><DateTime LCID=\"1033\" Group=\"GeneralDateTimeLong\" FormatString=\"G\" /></DateTimes></Format>",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "DateTime#####not a type",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Year",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "expression": "YEAR([Date])",
+            "lineageTag": "8a48cc9c-4bbf-4400-96e8-b6f71da353c3",
+            "dataCategory": "Years",
+            "summarizeBy": "none",
+            "modifiedTime": "2021-05-20T08:26:48.816667",
+            "structureModifiedTime": "2020-03-27T17:57:42.533333",
+            "refreshedTime": "2020-03-31T22:52:07.88",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2020-03-28T01:39:22.976667",
+              "refreshedTime": "2020-03-31T22:52:07.923333"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "MonthNo",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "expression": "MONTH([Date])",
+            "lineageTag": "7083ae2e-1020-4d17-9357-bd57ee635e94",
+            "dataCategory": "MonthOfYear",
+            "summarizeBy": "none",
+            "modifiedTime": "2021-05-20T08:26:48.816667",
+            "structureModifiedTime": "2020-03-27T17:57:42.533333",
+            "refreshedTime": "2020-03-31T22:52:07.88",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2020-03-28T01:39:22.976667",
+              "refreshedTime": "2020-03-31T22:52:07.903333"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Month",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "sortByColumn": "MonthNo",
+            "lineageTag": "5418e3ff-decb-4db0-9511-99a503e678de",
+            "dataCategory": "Months",
+            "summarizeBy": "none",
+            "modifiedTime": "2021-05-20T08:26:48.816667",
+            "structureModifiedTime": "2020-03-27T17:57:42.533333",
+            "refreshedTime": "2020-03-31T22:52:07.903333",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2020-03-28T01:39:22.98",
+              "refreshedTime": "2020-03-31T22:52:07.906667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "QuarterNo",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "lineageTag": "e7a22018-355c-4fc4-9b96-15ae99a42a34",
+            "dataCategory": "QuarterOfYear",
+            "summarizeBy": "none",
+            "modifiedTime": "2021-05-20T08:26:48.816667",
+            "structureModifiedTime": "2020-03-27T17:57:42.533333",
+            "refreshedTime": "2020-03-31T22:52:07.906667",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2020-03-28T01:39:23.053333",
+              "refreshedTime": "2020-03-31T22:52:07.923333"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Quarter",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "expression": "\"Qtr \" & [QuarterNo]",
+            "sortByColumn": "QuarterNo",
+            "lineageTag": "0d2e36e4-45c5-4390-b8d4-151248c21542",
+            "dataCategory": "Quarters",
+            "summarizeBy": "none",
+            "modifiedTime": "2021-05-20T08:26:48.816667",
+            "structureModifiedTime": "2020-03-27T17:57:42.533333",
+            "refreshedTime": "2020-03-31T22:52:08.036667",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2020-03-28T01:39:23.056667",
+              "refreshedTime": "2020-03-31T22:52:08.043333"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Text\" />",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "String#####not a type",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Day",
+            "dataType": "int64",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "expression": "DAY([Date])",
+            "lineageTag": "107923c5-1fd3-4b03-9e14-999e732760d4",
+            "dataCategory": "DayOfMonth",
+            "summarizeBy": "none",
+            "modifiedTime": "2021-05-20T08:26:48.816667",
+            "structureModifiedTime": "2020-03-27T17:57:42.533333",
+            "refreshedTime": "2020-03-31T22:52:07.903333",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2020-03-28T01:39:22.976667",
+              "refreshedTime": "2020-03-31T22:52:07.906667"
+            },
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              },
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              },
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "LocalDateTable_a0f5b894-4f57-4a54-a9d5-5508aa5843d0-216ce373-b93c-43b1-9d26-654b8ba9e95b",
+            "mode": "import",
+            "state": "ready",
+            "modifiedTime": "2020-03-28T01:39:22.923333",
+            "refreshedTime": "2020-03-31T22:52:07.87",
+            "source": {
+              "type": "calculated",
+              "expression": "Calendar(Date(Year(MIN('COVID'[Date])), 1, 1), Date(Year(MAX('COVID'[Date])), 12, 31))"
+            }
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Date Hierarchy",
+            "lineageTag": "b2371343-c3b0-42f4-b780-2973c9a3885f",
+            "state": "ready",
+            "modifiedTime": "2021-05-20T08:26:48.816667",
+            "structureModifiedTime": "2020-03-27T17:57:42.536667",
+            "refreshedTime": "2020-03-31T22:52:08.046667",
+            "levels": [
+              {
+                "name": "Year",
+                "ordinal": 0,
+                "column": "Year",
+                "lineageTag": "798ea538-726a-4fac-954a-b8967ee0f52c",
+                "modifiedTime": "2021-05-20T08:26:48.816667"
+              },
+              {
+                "name": "Quarter",
+                "ordinal": 1,
+                "column": "Quarter",
+                "lineageTag": "81cb2552-54f2-4477-bed2-6a4714e178f5",
+                "modifiedTime": "2021-05-20T08:26:48.816667"
+              },
+              {
+                "name": "Month",
+                "ordinal": 2,
+                "column": "Month",
+                "lineageTag": "24db5258-a552-4b8d-bd4c-9ba2be80a4c3",
+                "modifiedTime": "2021-05-20T08:26:48.816667"
+              },
+              {
+                "name": "Day",
+                "ordinal": 3,
+                "column": "Day",
+                "lineageTag": "5868eb4f-9c68-4b53-b52f-30003763709c",
+                "modifiedTime": "2021-05-20T08:26:48.816667"
+              }
+            ],
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              }
+            ]
+          }
+        ],
+        "annotations": [
+          {
+            "name": "__PBI_LocalDateTable",
+            "value": "true",
+            "modifiedTime": "2020-03-27T17:57:42.536667"
+          }
+        ]
+      },
+      {
+        "name": "COVID measures",
+        "lineageTag": "2409dfe5-366f-484b-8f9e-1888b1c39f60",
+        "modifiedTime": "2021-05-20T08:26:48.816667",
+        "structureModifiedTime": "2020-03-28T03:38:36.576667",
+        "columns": [
+          {
+            "type": "rowNumber",
+            "name": "RowNumber-2662979B-1795-4F74-8F37-6A1BA8059B61",
+            "dataType": "int64",
+            "isHidden": true,
+            "isUnique": true,
+            "isKey": true,
+            "isNullable": false,
+            "modifiedTime": "2020-03-27T17:57:42.55",
+            "structureModifiedTime": "2020-03-27T17:57:42.533333",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "attributeHierarchy": {
+              "state": "ready",
+              "modifiedTime": "2020-03-27T17:57:44.813333",
+              "refreshedTime": "2020-03-30T16:30:43.866667"
+            },
+            "annotations": [
+              {
+                "name": "DataTypeAtRefresh",
+                "value": "Int64#####not a type",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "COVID measures-b4337b49-e425-4b90-acb0-30bb0500cb95",
+            "mode": "import",
+            "state": "ready",
+            "modifiedTime": "2021-05-20T08:26:49.936667",
+            "refreshedTime": "1699-12-31T00:00:00",
+            "source": {
+              "type": "m",
+              "expression": "let\n    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText(\"i45WMlSKjQUA\", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type text) meta [Serialized.Text = true]) in type table [Column1 = _t]),\n    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"Column1\", Int64.Type}}),\n    #\"Removed Columns\" = Table.RemoveColumns(#\"Changed Type\",{\"Column1\"})\nin\n    #\"Removed Columns\""
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": "Total confirmed cases",
+            "expression": "SUM('COVID'[Daily cases])",
+            "formatString": "#,0",
+            "lineageTag": "ed193a17-448e-4fb0-9f62-f7b4b34e1c62",
+            "dataType": "int64",
+            "modifiedTime": "2021-05-20T08:26:48.816667",
+            "structureModifiedTime": "2020-03-27T17:57:42.533333",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" ThousandSeparator=\"True\" />",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              }
+            ]
+          },
+          {
+            "name": "Total deaths",
+            "expression": "SUM(COVID[Daily deaths])",
+            "formatString": "#,0",
+            "lineageTag": "75db23f1-b3f6-4ab9-ae6b-ff49978c8dfe",
+            "dataType": "int64",
+            "modifiedTime": "2021-05-20T08:26:48.816667",
+            "structureModifiedTime": "2020-03-27T17:57:42.533333",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" ThousandSeparator=\"True\" />",
+                "modifiedTime": "2020-03-28T03:08:07.453333"
+              }
+            ]
+          },
+          {
+            "name": "Case fatality rate",
+            "expression": "\nvar _totalDeath = SUM(COVID[Daily deaths])\nvar _totalCase  = SUM('COVID'[Daily cases] )\nreturn \nDIVIDE(_totalDeath,_totalCase)\n\n",
+            "formatString": "0.0\\ %;-0.0\\ %;0.0\\ %",
+            "lineageTag": "8ed849b8-3267-4c09-8560-9ac5f0b7fc0e",
+            "dataType": "double",
+            "modifiedTime": "2021-05-20T10:01:33.483333",
+            "structureModifiedTime": "2020-03-27T17:57:42.533333",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Percentage\" Accuracy=\"1\" />",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              }
+            ]
+          },
+          {
+            "name": "Confirmed cases",
+            "expression": "SUM('COVID'[Cases])",
+            "formatString": "#,0",
+            "lineageTag": "71cf7d49-e87f-4c23-83dc-40cfd3aa09ed",
+            "dataType": "int64",
+            "modifiedTime": "2021-05-20T08:26:48.816667",
+            "structureModifiedTime": "2020-03-27T17:57:42.533333",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" ThousandSeparator=\"True\" />",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              }
+            ]
+          },
+          {
+            "name": "Deaths",
+            "expression": "SUM('COVID'[Deaths])",
+            "formatString": "#,0",
+            "lineageTag": "7b874237-e841-4104-8c42-1e06ff3e365a",
+            "dataType": "int64",
+            "modifiedTime": "2021-05-20T08:26:48.816667",
+            "structureModifiedTime": "2020-03-27T17:57:42.533333",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" ThousandSeparator=\"True\" />",
+                "modifiedTime": "2020-03-27T17:57:42.536667"
+              }
+            ]
+          }
+        ],
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation",
+            "modifiedTime": "2020-03-27T17:57:42.536667"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table",
+            "modifiedTime": "2020-03-27T17:57:42.536667"
+          },
+          {
+            "name": "PBI_DescriptionAtRefresh",
+            "modifiedTime": "2021-05-20T08:26:49.936667"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "name": "61d3981d-89bc-4f78-b2b7-ab908a42ac71",
+        "fromTable": "COVID",
+        "fromColumn": "Date",
+        "toTable": "LocalDateTable_a0f5b894-4f57-4a54-a9d5-5508aa5843d0",
+        "toColumn": "Date",
+        "joinOnDateBehavior": "datePartOnly",
+        "state": "ready",
+        "modifiedTime": "2020-03-28T01:39:22.973333",
+        "refreshedTime": "2020-03-31T22:52:07.903333"
+      },
+      {
+        "name": "7cd80576-d9a4-4516-aad6-c8e06584bf7c",
+        "fromTable": "COVID",
+        "fromColumn": "State",
+        "toTable": "StateDim",
+        "toColumn": "State code",
+        "state": "ready",
+        "modifiedTime": "2020-03-28T01:39:22.85",
+        "refreshedTime": "2020-03-31T22:52:07.766667"
+      }
+    ],
+    "cultures": [
+      {
+        "name": "en-US",
+        "modifiedTime": "2020-03-27T17:57:42.533333",
+        "structureModifiedTime": "2021-05-20T08:27:01.85",
+        "linguisticMetadata": {
+          "content": {
+            "Version": "2.0.0",
+            "Language": "en-US",
+            "DynamicImprovement": "HighConfidence",
+            "Entities": {
+              "covid_measures.total_deaths": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "COVID measures",
+                    "ConceptualProperty": "Total deaths"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "Total Deaths": {
+                      "State": "Suggested",
+                      "Source": {
+                        "Type": "External",
+                        "Agent": "PowerBI.VisualColumnRename"
+                      },
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "covid_measures.case_fatality_rate": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "COVID measures",
+                    "ConceptualProperty": "Case fatality rate"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "Case Fatality Rate": {
+                      "State": "Suggested",
+                      "Source": {
+                        "Type": "External",
+                        "Agent": "PowerBI.VisualColumnRename"
+                      },
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "covid_measures.total_confirmed_cases": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "COVID measures",
+                    "ConceptualProperty": "Total confirmed cases"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "Confirmed Cases": {
+                      "State": "Suggested",
+                      "Source": {
+                        "Type": "External",
+                        "Agent": "PowerBI.VisualColumnRename"
+                      },
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "statedim.country": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "StateDim",
+                    "ConceptualProperty": "Country"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    ".": {
+                      "State": "Suggested",
+                      "Source": {
+                        "Type": "External",
+                        "Agent": "PowerBI.VisualColumnRename"
+                      },
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "statedim.state": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "StateDim",
+                    "ConceptualProperty": "State"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    ".": {
+                      "State": "Suggested",
+                      "Source": {
+                        "Type": "External",
+                        "Agent": "PowerBI.VisualColumnRename"
+                      },
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "contentType": "json",
+          "modifiedTime": "2021-05-20T08:27:01.85"
+        }
+      }
+    ],
+    "expressions": [
+      {
+        "name": "Cases",
+        "kind": "m",
+        "expression": "let\n    Source = Csv.Document(AzureStorage.BlobContents(\"https://usafactsstatic.blob.core.windows.net/public/data/covid-19/covid_confirmed_usafacts.csv\"),[Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.None]),\n    #\"Promoted Headers\" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),\n    Cols = Table.ColumnNames(#\"Promoted Headers\"),\n    ColsUnpivot = List.Skip(Cols,4),\n    #\"Unpivoted Only Selected Columns\" = Table.Unpivot(#\"Promoted Headers\", ColsUnpivot, \"Attribute\", \"Value\"),\n    #\"Changed Type\" = Table.TransformColumnTypes(#\"Unpivoted Only Selected Columns\",{{\"Value\", Int64.Type}}),\n    #\"Removed Errors\" = Table.RemoveRowsWithErrors(#\"Changed Type\", {\"Value\"}),\n    #\"Renamed Columns\" = Table.RenameColumns(#\"Removed Errors\",{{\"Attribute\", \"Date\"}, {\"Value\", \"Cases\"}}),\n    #\"Added Custom\" = Table.AddColumn(#\"Renamed Columns\", \"FIPS\", each Text.PadStart(Text.From([countyFIPS]),5,\"0\")),\n    #\"Removed Columns\" = Table.RemoveColumns(#\"Added Custom\",{\"countyFIPS\"}),\n    #\"Changed Type1\" = Table.TransformColumnTypes(#\"Removed Columns\",{{\"Date\", type date}})\nin\n    #\"Changed Type1\"",
+        "lineageTag": "5df20e43-c646-4ead-8be8-3dc068b5df93",
+        "modifiedTime": "2021-05-20T08:26:49.936667",
+        "annotations": [
+          {
+            "name": "PBI_DescriptionAtRefresh",
+            "modifiedTime": "2021-05-20T08:26:49.936667"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation",
+            "modifiedTime": "2021-05-20T08:26:49.936667"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table",
+            "modifiedTime": "2021-05-20T08:26:49.936667"
+          }
+        ]
+      },
+      {
+        "name": "Deaths",
+        "kind": "m",
+        "expression": "let\n    Source = Csv.Document(AzureStorage.BlobContents(\"https://usafactsstatic.blob.core.windows.net/public/data/covid-19/covid_deaths_usafacts.csv\"),[Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.None]),\n    #\"Promoted Headers\" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),\n    Cols = Table.ColumnNames(#\"Promoted Headers\"),\n    ColsUnpivot = List.Skip(Cols,4),\n    #\"Unpivoted Only Selected Columns\" = Table.Unpivot(#\"Promoted Headers\", ColsUnpivot, \"Attribute\", \"Value\"),\n    #\"Changed Type\" = Table.TransformColumnTypes(#\"Unpivoted Only Selected Columns\",{{\"Value\", Int64.Type}}),\n    #\"Removed Errors\" = Table.RemoveRowsWithErrors(#\"Changed Type\", {\"Value\"}),\n    #\"Renamed Columns\" = Table.RenameColumns(#\"Removed Errors\",{{\"Attribute\", \"Date\"}, {\"Value\", \"Deaths\"}}),\n    #\"Added Custom\" = Table.AddColumn(#\"Renamed Columns\", \"FIPS\", each Text.PadStart(Text.From([countyFIPS]),5,\"0\")),\n    #\"Removed Columns\" = Table.RemoveColumns(#\"Added Custom\",{\"countyFIPS\"}),\n    #\"Changed Type1\" = Table.TransformColumnTypes(#\"Removed Columns\",{{\"Date\", type date}})\nin\n    #\"Changed Type1\"",
+        "lineageTag": "70c7b15a-15cb-4c28-8b6a-f0d502631085",
+        "modifiedTime": "2021-05-20T08:26:49.936667",
+        "annotations": [
+          {
+            "name": "PBI_DescriptionAtRefresh",
+            "modifiedTime": "2021-05-20T08:26:49.936667"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation",
+            "modifiedTime": "2021-05-20T08:26:49.936667"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table",
+            "modifiedTime": "2021-05-20T08:26:49.936667"
+          }
+        ]
+      }
+    ],
+    "annotations": [
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "1",
+        "modifiedTime": "2020-03-27T17:57:42.536667"
+      },
+      {
+        "name": "PBIDesktopVersion",
+        "value": "2.93.641.0 (21.05)",
+        "modifiedTime": "2021-05-20T08:26:48.816667"
+      },
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"Cases\",\"Deaths\",\"COVID\",\"StateDim\",\"COVID measures\"]",
+        "modifiedTime": "2021-05-20T21:41:46.63"
+      }
+    ]
+  }
+}
