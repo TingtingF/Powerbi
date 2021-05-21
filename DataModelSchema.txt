@@ -1558,12 +1558,12 @@
             ]
           },
           {
-            "name": "Days in period",
-            "expression": "\nINT ( LASTDATE ( 'COVID'[Date] ) - FIRSTDATE ( 'COVID'[Date] ) )",
+            "name": "DaysInPeriod",
+            "expression": "\nVAR _firstDate = FIRSTDATE ( 'COVID'[Date] ) \nVAR _lastDate = LASTDATE ( 'COVID'[Date] ) \nRETURN\nINT ( _lastDate - _firstDate )",
             "formatString": "0",
             "lineageTag": "884a551d-27f5-480c-aaf0-5e1883ca145c",
             "dataType": "int64",
-            "modifiedTime": "2021-05-21T05:49:29.406667",
+            "modifiedTime": "2021-05-21T05:59:40.853333",
             "structureModifiedTime": "2021-05-21T05:48:23.84",
             "annotations": [
               {
@@ -1575,11 +1575,11 @@
           },
           {
             "name": "CasesOfLastDay",
-            "expression": "\nCALCULATE (\n    SUM(COVID[Cases]),\n    LASTDATE ( 'COVID'[Date] )\n)",
+            "expression": "\nVAR _sum = SUM(COVID[Cases])\nVAR _lastDate = LASTDATE ( 'COVID'[Date] )\nRETURN \nCALCULATE (\n    _sum,\n    _lastDate \n)",
             "formatString": "0",
             "lineageTag": "829f01b5-69a7-4552-b8bf-0faa03ad1382",
             "dataType": "int64",
-            "modifiedTime": "2021-05-21T05:50:30.406667",
+            "modifiedTime": "2021-05-21T05:58:21.326667",
             "structureModifiedTime": "2021-05-21T05:49:50.973333",
             "annotations": [
               {
