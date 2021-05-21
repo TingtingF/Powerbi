@@ -10,4 +10,4 @@
 ### 6. Derfor kan denne filen brukes for versjonkontroll via git
 ### 7. For å spore endring av hele pbixfil, kan pbitfil lastes opp på github for å lagre hele historikken til hvordan pbixfil har utviklet seg, og gå tilbake til hvilket som helst commit-punkt.
 
-Denne jobben er inspirert av kildet: https://www.kasperonbi.com/how-to-change-the-dataset-script-in-power-bi-desktop/
+##### Denne jobben er inspirert av kildet: https://www.kasperonbi.com/how-to-change-the-dataset-script-in-power-bi-desktop/
