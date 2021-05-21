@@ -1,8 +1,8 @@
 {
-  "name": "bf0d43d6-2a6a-4776-bf3f-7665b3b5f73c",
+  "name": "797a0c43-d28a-40e7-b80d-6e1de9020500",
   "compatibilityLevel": 1550,
   "createdTimestamp": "2020-03-27T18:57:42.113333+01:00",
-  "lastUpdate": "2021-05-21T07:43:59.083333+02:00",
+  "lastUpdate": "2021-05-21T10:40:39.523333+02:00",
   "lastSchemaUpdate": "2021-05-20T10:26:46.13+02:00",
   "lastProcessed": "2020-04-01T00:52:07.76+02:00",
   "model": {
@@ -411,7 +411,7 @@
         "name": "COVID",
         "lineageTag": "cf15ed27-df77-46d4-afce-1e9db59f448d",
         "modifiedTime": "2021-05-20T08:26:48.816667",
-        "structureModifiedTime": "2021-05-21T07:32:36.65",
+        "structureModifiedTime": "2021-05-21T06:07:11.093333",
         "columns": [
           {
             "type": "rowNumber",
@@ -817,65 +817,6 @@
                 "name": "DataTypeAtRefresh",
                 "value": "Int64#####not a type",
                 "modifiedTime": "2020-03-27T17:57:42.536667"
-              }
-            ]
-          },
-          {
-            "type": "calculated",
-            "name": "MonthNum",
-            "dataType": "int64",
-            "isDataTypeInferred": true,
-            "expression": "MONTH(COVID[Date])",
-            "formatString": "0",
-            "lineageTag": "7cd799c0-dc21-4229-9ecb-2004b700a51b",
-            "summarizeBy": "sum",
-            "modifiedTime": "2021-05-21T07:31:54.753333",
-            "structureModifiedTime": "2021-05-21T07:31:26.31",
-            "refreshedTime": "2021-05-21T07:31:54.753333",
-            "attributeHierarchy": {
-              "state": "ready",
-              "modifiedTime": "2021-05-21T07:31:54.756667",
-              "refreshedTime": "2021-05-21T07:31:54.756667"
-            },
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic",
-                "modifiedTime": "2021-05-21T07:31:26.446667"
-              },
-              {
-                "name": "Format",
-                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />",
-                "modifiedTime": "2021-05-21T07:31:54.536667"
-              }
-            ]
-          },
-          {
-            "type": "calculated",
-            "name": "MonthName",
-            "dataType": "string",
-            "isDataTypeInferred": true,
-            "expression": "FORMAT(COVID[Date],\"MMMM\")",
-            "lineageTag": "2feef3ac-6935-45b7-af62-99ab43729065",
-            "summarizeBy": "none",
-            "modifiedTime": "2021-05-21T07:34:31.546667",
-            "structureModifiedTime": "2021-05-21T07:32:36.65",
-            "refreshedTime": "2021-05-21T07:34:31.546667",
-            "attributeHierarchy": {
-              "state": "ready",
-              "modifiedTime": "2021-05-21T07:34:31.546667",
-              "refreshedTime": "2021-05-21T07:34:31.546667"
-            },
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "Automatic",
-                "modifiedTime": "2021-05-21T07:32:36.703333"
-              },
-              {
-                "name": "Format",
-                "value": "<Format Format=\"Text\" />",
-                "modifiedTime": "2021-05-21T07:34:31.286667"
               }
             ]
           }
@@ -1587,17 +1528,16 @@
           },
           {
             "name": "Case fatality rate",
-            "expression": "\n\nDIVIDE([Total deaths],[Total confirmed cases])\n\n",
-            "formatString": "0.0\\ %;-0.0\\ %;0.0\\ %",
+            "expression": "\nFORMAT(\nDIVIDE([Total deaths],[Total confirmed cases]),\n\"0.00%\"\n)\n",
             "lineageTag": "8ed849b8-3267-4c09-8560-9ac5f0b7fc0e",
-            "dataType": "double",
-            "modifiedTime": "2021-05-20T21:48:50.673333",
+            "dataType": "string",
+            "modifiedTime": "2021-05-21T09:01:09.49",
             "structureModifiedTime": "2020-03-27T17:57:42.533333",
             "annotations": [
               {
                 "name": "Format",
-                "value": "<Format Format=\"Percentage\" Accuracy=\"1\" />",
-                "modifiedTime": "2020-03-27T17:57:42.536667"
+                "value": "<Format Format=\"Text\" />",
+                "modifiedTime": "2021-05-21T08:57:26.356667"
               }
             ]
           },
