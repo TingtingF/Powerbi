@@ -411,7 +411,7 @@
         "name": "COVID",
         "lineageTag": "cf15ed27-df77-46d4-afce-1e9db59f448d",
         "modifiedTime": "2021-05-20T08:26:48.816667",
-        "structureModifiedTime": "2021-05-20T21:49:10.966667",
+        "structureModifiedTime": "2021-05-21T06:07:11.093333",
         "columns": [
           {
             "type": "rowNumber",
@@ -835,21 +835,6 @@
           }
         ],
         "measures": [
-          {
-            "name": "Updated",
-            "expression": "\"Data provided by USAFacts. Because of the frequency of data upates, they may not reflect the exact numbers reported by government organizations or the news media. For more information or to download the data, please click the logo below.  Data updated through \" & FORMAT([Max date],\"mmmm dd, yyyy\") & \".\"",
-            "lineageTag": "e33fe6db-d2e8-42bb-8061-c15b982f4012",
-            "dataType": "string",
-            "modifiedTime": "2021-05-20T08:26:48.816667",
-            "structureModifiedTime": "2020-03-27T17:57:42.533333",
-            "annotations": [
-              {
-                "name": "Format",
-                "value": "<Format Format=\"Text\" />",
-                "modifiedTime": "2020-03-27T17:57:42.536667"
-              }
-            ]
-          },
           {
             "name": "Max date",
             "expression": "CALCULATE(MAX('COVID'[Date]),ALL('COVID'))",
@@ -1468,7 +1453,7 @@
         "name": "COVID measures",
         "lineageTag": "2409dfe5-366f-484b-8f9e-1888b1c39f60",
         "modifiedTime": "2021-05-20T08:26:48.816667",
-        "structureModifiedTime": "2021-05-21T05:49:50.973333",
+        "structureModifiedTime": "2021-05-21T06:05:08.976667",
         "columns": [
           {
             "type": "rowNumber",
@@ -1586,6 +1571,22 @@
                 "name": "Format",
                 "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />",
                 "modifiedTime": "2021-05-21T05:50:30.406667"
+              }
+            ]
+          },
+          {
+            "name": "DeathsOfLastDay",
+            "expression": "\nVAR _sum = SUM(COVID[Deaths])\nVAR _lastDate = LASTDATE ( 'COVID'[Date] )\nRETURN \nCALCULATE (\n    _sum,\n    _lastDate \n)",
+            "formatString": "0",
+            "lineageTag": "1d9378f7-3662-4cb6-9274-87e34eb3dd0b",
+            "dataType": "int64",
+            "modifiedTime": "2021-05-21T06:05:51.566667",
+            "structureModifiedTime": "2021-05-21T06:05:08.976667",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"NumberWhole\" Accuracy=\"0\" />",
+                "modifiedTime": "2021-05-21T06:05:51.566667"
               }
             ]
           }
