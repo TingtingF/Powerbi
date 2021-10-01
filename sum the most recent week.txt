@@ -1,0 +1,9 @@
+Antall_tester_denne_uka = 
+ CALCULATE (
+    SUM ( 'Provesvar vSvarTidKommune'[antallTesterSum] ),
+    FILTER (
+        ALL ( 'Provesvar vSvarTidKommune'[ukeNr], 'Provesvar vSvarTidKommune'[aar] ),
+        'Provesvar vSvarTidKommune'[ukeNr] = MAX ( 'Provesvar vSvarTidKommune'[ukeNr] )
+            && 'Provesvar vSvarTidKommune'[aar] = MAX ( 'Provesvar vSvarTidKommune'[aar] )
+    )
+)
